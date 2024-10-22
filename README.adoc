@@ -13,7 +13,7 @@ This repository hosts the documentation sources for the following products (dire
 * Hypervisor details in SUSE Customer Center (`scc-hypervisor-collector`)
 * Hardening SUSE Linux Enterprise with STIG (`stig`)
 * Enriched system visibility in the SUSE Customer Cente (`suseconnect-visibility`)
-* Getting started with Trento Premium (`trento`)
+* Getting started with Trento (`trento`)
 
 Released versions of the SLE documentation are published at
 https://documentation.suse.com/.

@@ -7,7 +7,7 @@
     %entities;
 
   <!-- Trento specific entities -->
-  <!ENTITY trentopremium        "Trento Premium">
+  <!ENTITY trento               "Trento">
   <!ENTITY trentoadmin          "trentoservice">
   <!ENTITY trentoserverip       "192.168.1.2">
   <!ENTITY trentoservername     "<replaceable
@@ -36,7 +36,7 @@ As agreed on https://confluence.suse.com/x/DAEcN on our Trento doc kick off
     xmlns:xi="http://www.w3.org/2001/XInclude"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:its="http://www.w3.org/2005/11/its">
-  <title>Getting started with &trentopremium;</title>
+  <title>Getting started with &trento;</title>
   <subtitle>&sles4sapreg;</subtitle>
   <info>
      <!-- History -->
@@ -80,15 +80,15 @@ As agreed on https://confluence.suse.com/x/DAEcN on our Trento doc kick off
     -->
 
     <!-- Social Media -->
-    <meta name="title" its:translate="yes">Getting started with &trentopremium;</meta>
-    <meta name="social-descr" its:translate="yes">Use &trentopremium; for &sles4sapa;</meta>
+    <meta name="title" its:translate="yes">Getting started with &trento;</meta>
+    <meta name="social-descr" its:translate="yes">Use &trento; for &sles4sapa;</meta>
 
     <!-- Search -->
-    <meta name="description" its:translate="yes">How to use &trentopremium; for &sles4sap;</meta>
+    <meta name="description" its:translate="yes">How to use &trento; for &sles4sap;</meta>
 
     <abstract>
       <para>
-       &trentopremium; is an open cloud native Web console that aims to help
+       &trento; is an open cloud native Web console that aims to help
        &sap; Basis consultants and administrators to check the configuration, monitor and manage the entire OS stack of their
        &sap; environments, including HA features.
       </para>
@@ -106,12 +106,11 @@ As agreed on https://confluence.suse.com/x/DAEcN on our Trento doc kick off
   </important>
 
   <section xml:id="sec-trento-what">
-    <title>What is &trentopremium;?</title>
+    <title>What is &trento;?</title>
     <para>
-      &trentopremium; is the extended version of the Trento community project containing
-      additional checks. Apart from their naming, both are comprehensive monitoring solutions
-      consisting of two main components, the &t.server; and the &t.agent;.
-      Both Trento variants provide the following features:
+      &trento; is a comprehensive monitoring solution for your SAP landscape.
+      It consists of two main components, the &t.server; and the &t.agent;,
+      providing the following features:
     </para>
     <remark>toms 2024-04-18 (change#9): maybe a reference here about improved HANA multitenant support?</remark>
     <!--
@@ -159,10 +158,10 @@ As agreed on https://confluence.suse.com/x/DAEcN on our Trento doc kick off
       </listitem>
               <listitem>
         <para>
-          Summary of available patches and upgradable packages for each registered hosts via integration 
+          Summary of available patches and upgradable packages for each registered hosts via integration
          with &suma;.
         </para>
-      </listitem>  
+      </listitem>
       <listitem>
         <para>
           Monitoring of CPU and Memory usage at host level through basic integration with &prometheus;
@@ -183,7 +182,7 @@ As agreed on https://confluence.suse.com/x/DAEcN on our Trento doc kick off
           Housekeeping capabilities.
         </para>
       </listitem>
-  
+
     </itemizedlist>
 
     <para> The <emphasis role="strong">&t.server;</emphasis> is an
@@ -219,7 +218,7 @@ As agreed on https://confluence.suse.com/x/DAEcN on our Trento doc kick off
     <!--
       Most ist taken from https://confluence.suse.com/x/uoOyN
     -->
-    <para>Trento Premium is available at no extra cost for SLES for SAP subscribers. Particularly, Trento's two main components have the following product lifecycles:</para>
+    <para>&trento; is available at no extra cost for SLES for SAP subscribers. Particularly, Trento's two main components have the following product lifecycles:</para>
 
     <variablelist>
       <varlistentry>
@@ -267,7 +266,7 @@ As agreed on https://confluence.suse.com/x/DAEcN on our Trento doc kick off
             </listitem>
             <listitem>
               <para> If you do not have a &k8s; enterprise solution but you still want
-                to try &trentopremium;, &suse; Rancher's K3s provides you with an easy
+                to try &trento;, &suse; Rancher's K3s provides you with an easy
                 way to get started. But keep in mind that K3s default installation process
                 deploys a single node &k8s; cluster, which is not a recommended
                 setup for a stable Trento production instance.
@@ -835,7 +834,7 @@ As agreed on https://confluence.suse.com/x/DAEcN on our Trento doc kick off
     <title>Performing configuration checks</title>
     <remark>toms 2024-04-18 (change#8): First saptune related configuration checks (host and cluster specific) -> update</remark>
     <para>
-     One of Trento's main features is to provide configuration checks that ensure your infrastructure setup adheres to our Best Practices, 
+     One of Trento's main features is to provide configuration checks that ensure your infrastructure setup adheres to our Best Practices,
      or other vendor's Best Practices, and does not drift away in time. Configuration checks ara available for
      HANA clusters, ASCS/ERS clusters and hosts. The following procedure is specific to a HANA cluster. The procedure for an ASCS/ERS cluster
      or a host would be exactly the same, only starting from the corresponding Details view:
@@ -1020,7 +1019,7 @@ As agreed on https://confluence.suse.com/x/DAEcN on our Trento doc kick off
       <listitem>
         <formalpara>
           <title><guimenu>About</guimenu></title>
-          <para>Shows the Trento flavor, the current server version, a link to
+          <para>Shows the current Trento server version, a link to
             the GitHub repository of the Trento Web component, and the number of
             registered &sles4sap;&nbsp;subscriptions that has been discovered. </para>
         </formalpara>
@@ -1256,7 +1255,7 @@ The health boxes in the dashboard are clickable. By clicking on one particular b
                <listitem>
                 <para>Available software updates sections: when settings for SUSE Manager are maintained and the host
                  is managed by the SUMA instance for which connection data has been provided, this section shows
-                 a summary of the available patches and upgradable packages for this particular host. Refer to section 
+                 a summary of the available patches and upgradable packages for this particular host. Refer to section
                 <xref linkend="sec-integration-with-SUSE-Manager"/> for further details. </para>
               </listitem>
               <listitem>
@@ -1387,11 +1386,11 @@ The health boxes in the dashboard are clickable. By clicking on one particular b
                 </para>
               </listitem>
               <listitem>
-                <para>A <guimenu>Check Result</guimenu> section, showing a summary of the results of the last 
+                <para>A <guimenu>Check Result</guimenu> section, showing a summary of the results of the last
                  check execution, when applicable.
                 </para>
               </listitem>
-       
+
               <listitem>
                 <para>A <guimenu>Node details</guimenu> section showing the following for each
                  node in the cluster: the node status (Online or Maintenance or Other), the host name, the role of the node
@@ -1768,7 +1767,7 @@ In the Trento dashboard, go to the overview corresponding to the object for whic
               fileref="trento-suse-manager-settings.png" />
           </imageobject>
         </mediaobject>
-      </figure>  
+      </figure>
    <para>
    With the &suma; settings configured, the &sap; admin can test the connection
    by clicking <guimenu>Test Connection</guimenu>.
@@ -1788,7 +1787,7 @@ In the Trento dashboard, go to the overview corresponding to the object for whic
    enhancement. Security advisories are regarded as critical. If one is found,
    the health of the host will be set to critical too. The others are to be seen as warnings.</para>
     <para>
-    At any time, the user can clear the &suma; settings from the Settings view. 
+    At any time, the user can clear the &suma; settings from the Settings view.
     As a result, all information about available software updates disappears from the console and the status of the hosts is adjusted accordingly.</para>
     </section>
 
@@ -2248,7 +2247,7 @@ In the Trento dashboard, go to the overview corresponding to the object for whic
         determined using the <guimenu>Settings</guimenu> button in the
         corresponding cluster detail view. See <xref
           linkend="lst-trento-web-pace-cluster-settings" /> for
-        details. </para> 
+        details. </para>
     </section>
 -->
 
@@ -2260,7 +2259,7 @@ In the Trento dashboard, go to the overview corresponding to the object for whic
    <para>By default, the API key does not have an expiration date. To increase the
     overall security of the setup, meet internal security requirements, or both,
     the user can set up a custom expiration date.</para>
-   <para>To do that, go to the Settings view and click 
+   <para>To do that, go to the Settings view and click
     the <guimenu>Generate Key</guimenu> button in the API Key section:</para>
           <figure>
         <title><guimenu>Checks catalog</guimenu></title>
@@ -2440,7 +2439,7 @@ In the Trento dashboard, go to the overview corresponding to the object for whic
     <title>Reporting a Problem</title>
     <para>
       Any &suse; customer, with a registered &sles4sap;&nbsp;15 (SP1 or higher) distribution,
-     experiencing an issue with &trentopremium;, can report the problem either directly in the &scc;
+     experiencing an issue with &trento;, can report the problem either directly in the &scc;
      or through the corresponding vendor, depending on their licensing model. Please report the problem under &sles4sap;&nbsp;15 and component trento.
     </para>
       <para>
@@ -2845,7 +2844,7 @@ trento-server-rabbitmq-0</screen>
             <listitem>
               <para>Enhanced discovery capabilities, including improved
                support HANA multi-tenant architecture, HANA scale out cluster
-               discovery, discovery of clsluters using diskless SBD and 
+               discovery, discovery of clsluters using diskless SBD and
                maintenance awareness.</para>
             </listitem>
             <listitem>
